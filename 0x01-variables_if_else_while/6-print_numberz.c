@@ -14,7 +14,7 @@ int main(void)
 
 	while (c <= 9)
 	{
-		putchar(c%10);
+		putchar(c + '0');
 		c++;
 	}
 	putchar('\n');
