@@ -14,7 +14,7 @@ int main(void)
 
 	while (c <= 9)
 	{
-		putchar('%d'c);
+		putchar("%i",c);
 		c++;
 	}
 	putchar('\n');
