@@ -7,8 +7,8 @@
  * Return:0 or 1
  */
 
-int _isdigit(char c)
+int _isdigit(int c)
 {
-	return (isdigit(c));
+	return (c >= 48 && c <= 57);
 
 }
