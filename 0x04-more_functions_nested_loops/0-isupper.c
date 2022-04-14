@@ -1,4 +1,5 @@
-#include "main.h"
+#include<stdio.h>
+#include<ctype.h>
 
 /**
  * _isupper - check for upper case letter
@@ -6,8 +7,7 @@
  * Return:0 or 1
  */
 
-int _isupper(int c)
+int _isupper(char c)
 {
 	return (c >= 65 && c <= 90);
-
 }
