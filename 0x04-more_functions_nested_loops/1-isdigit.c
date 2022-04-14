@@ -1,4 +1,5 @@
 #include "main.h"
+#include<ctype.h>
 
 /**
  * _isdigit - check for a digit
@@ -8,6 +9,6 @@
 
 int _isdigit(char c)
 {
-	return (c >= 48 && c <= 57);
+	return (isdigit(c));
 
 }
