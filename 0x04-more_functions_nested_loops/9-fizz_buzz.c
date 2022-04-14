@@ -7,7 +7,6 @@
 
 int main(void)
 {
-
 	int i = 1;
 
 	while (i <= 100)
@@ -28,7 +27,6 @@ int main(void)
 		{
 			printf("%i", i);
 		}
-
 		if (i != 100)
 		{
 			putchar(' ');
@@ -38,5 +36,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-
 }
