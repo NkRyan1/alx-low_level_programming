@@ -8,16 +8,18 @@
  * Return: 0
  */
 
-int getMaxPrimeFactor(int n) 
+int getMaxPrimeFactor(long int n) 
 {
 
-	      int i, max = -1;
+	      int i, max;
+		  
+	      max = -1;
 
 	      while(n % 2 == 0) 
 	      {
 
 	            max = 2;
-		    n = n / 2; //reduce n by dividing this by 2
+		    n = n / 2;
 
 	      }
 
@@ -40,11 +42,11 @@ int getMaxPrimeFactor(int n)
 int main()
 {
 
-	int n;
+	long int n;
 
 	n = getMaxPrimeFactor(612852475143);
 
-	printf("Max prime factor: %d", n);
+	printf("Max prime factor: %ld", n);
 
 	return (0);
 
