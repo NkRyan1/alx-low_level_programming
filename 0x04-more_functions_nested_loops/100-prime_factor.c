@@ -46,7 +46,7 @@ int main()
 
 	n = getMaxPrimeFactor(612852475143);
 
-	printf("Max prime factor: %ld", n);
+	printf("Max prime factor: %ld\n", n);
 
 	return (0);
 
