@@ -5,7 +5,7 @@
  * Return:void
  */
 
-void print_number(int n)
+void print_number(long int n)
 {
 
 	int d, i, ii;
