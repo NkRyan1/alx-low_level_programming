@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include<stdio.h>
 /**
  * puts_half - print second half of a string
  * @str: char array string type
