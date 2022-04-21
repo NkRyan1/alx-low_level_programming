@@ -8,10 +8,9 @@
 
 int _atoi(char *s)
 {
-	int sign, resp, firstNum;
+	int sign, resp, firstNum, i;
 
 	sign = 1;
-	firstNum = 0;
 	resp = 0;
 	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
 	{
