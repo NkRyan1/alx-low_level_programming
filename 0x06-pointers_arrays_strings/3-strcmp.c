@@ -8,19 +8,16 @@
 
 int _strcmp(char *s1, char *s2)
 {
-int i;
+	char c1;
+	char c2;
 
-/**
- * We have reached the end of S1 OR we have reached the end of S2
- * 
-*/
-
-for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
-{
-	if (s1[i] != s2[i])
+	do
 	{
-		return (s1[i] - s2[i]);
+		c1 = *s1++;
+		c2 = *s2++;
+		if (c1 == '\0')
+			return (c1 - c2);
 	}
-}
-return (0);
+	while (c1 == c2);
+	return (c1 -c2);
 }
