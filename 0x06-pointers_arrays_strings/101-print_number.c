@@ -25,5 +25,6 @@ void print_number(int n)
 		_putchar('0' + resp);
 
 	}
+	_putchar('\n');
 
 }

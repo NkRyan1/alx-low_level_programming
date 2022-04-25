@@ -1,4 +1,6 @@
 #include "main.h"
+#include<string.h>
+#include<stdio.h>
 /**
  * _strcmp - compares two strings
  * @s1: string 1
@@ -19,5 +21,6 @@ int _strcmp(char *s1, char *s2)
 			return (c1 - c2);
 	}
 	while (c1 == c2);
+	_putchar('\n');
 	return (c1 -c2);
 }
