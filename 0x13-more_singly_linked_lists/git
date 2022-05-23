@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "just added a file"
+git push
