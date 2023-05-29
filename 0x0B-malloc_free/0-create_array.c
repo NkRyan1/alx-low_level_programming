@@ -4,12 +4,18 @@
 char* create_array(int a, char b)
 {
 	char* s;
+	int i;
 		
 	if (a == 0)
 	{
 		return NULL;
 	}
 	s = malloc(a);
-	s[0] = b;
+	i = 0;
+	while (i < a)
+	{
+		s[i] = b;
+		i++;
+	}
 	return s;
 }
