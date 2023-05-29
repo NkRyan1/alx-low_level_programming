@@ -1,14 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ *create_array - main block
+ *Description: Create an array and initialise it with the given char
+ *Return: a char pointer or NULL when it fails
+ *
+ */
+
 char* create_array(int a, char b)
 {
-	char* s;
+	char *s;
 	int i;
-		
+	
 	if (a == 0)
 	{
-		return NULL;
+		return (NULL);
 	}
 	s = malloc(a);
 	i = 0;
@@ -17,5 +24,6 @@ char* create_array(int a, char b)
 		s[i] = b;
 		i++;
 	}
-	return s;
+	return (s);
+	free(s);
 }
