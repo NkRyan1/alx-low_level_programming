@@ -26,6 +26,7 @@ char *create_array(int a, char b)
 		s[i] = b;
 		i++;
 	}
+	s[a] = '\0';
 	return (s);
 	free(s);
 }
