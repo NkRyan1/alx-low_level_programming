@@ -24,7 +24,7 @@ char *_strdup(const char *str)
 	if (lg == 1)
 	{
 		s = (char *)malloc(sizeof(char) * lg);
-		s[0] = \0;
+		s[0] = '\0';
 		return (s);
 	}
 	s = (char *)malloc(sizeof(char) * lg);
