@@ -20,12 +20,12 @@ char *argstostr(long int r, char **arr)
 	long int co;
 
 	k = 0;
-	j = 0;
 	co = 0;
 	if (r == 0 || arr == NULL)
 		return (NULL);
 	for (i = 0; i < r; i++)
 	{
+		j = 0;
 		while (arr[i][j] != '\0')
 		{
 			co++;
@@ -33,7 +33,7 @@ char *argstostr(long int r, char **arr)
 		}
 		co++;
 	}
-	s = (char *)malloc(sizeof(char) * (r * 10));
+	s = (char *)malloc(sizeof(char) * (co - 2));
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < r; i++)
