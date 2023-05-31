@@ -12,6 +12,8 @@
 
 void free_grid(int **a, int r)
 {
+	int k;
+
 	if ((a != NULL) && (r != 0))
 	{
 		for (k = 0; k < r; k++)
