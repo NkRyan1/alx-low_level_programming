@@ -48,6 +48,5 @@ char *argstostr(long int r, char **arr)
 		s[k] = '\n';
 		k++;
 	}
-	s[k] = '\0';
 	return (s);
 }
