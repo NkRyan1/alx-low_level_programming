@@ -15,15 +15,25 @@ int **alloc_grid(int c, int r)
 	int **s;
 	int i;
 	int j;
-	
+
+	if (c == 0 || r == 0)
+		return (NULL);
 	s = (int **)malloc(sizeof(int *) * r);
-        if (s == NULL)
-                return (NULL);
-        for (i = 0; i < r; i++)
-        {
-		s[i] = (int *)malloc(sizeof(int)*c);
+	if (s == NULL)
+	{
+		free(s);
+		return (NULL);
+	}
+	for (i = 0; i < r; i++)
+	{
+		s[i] = (int *)malloc(sizeof(int) * c);
 		if (s[i] == NULL)
+		{
+			for (k = 0; k < i+1; k++)
+				free(s[k]);
+			free(s);
 			return (NULL);
+		}
 		for (j = 0; j < c; j++)
 			s[i][j] = 0;
 	}
