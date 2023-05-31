@@ -14,7 +14,6 @@
 char *str_concat(char *str1, char *str2)
 {
 	char *s;
-	char *s2;
 	int lg;
 	int lg1;
 	int i;
