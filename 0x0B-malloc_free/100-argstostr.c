@@ -33,7 +33,7 @@ char *argstostr(long int r, char **arr)
 		}
 		co++;
 	}
-	s = (char *)malloc(sizeof(char) * (co - 2));
+	s = (char *)malloc(sizeof(char) * co + 1);
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < r; i++)
@@ -48,5 +48,6 @@ char *argstostr(long int r, char **arr)
 		s[k] = '\n';
 		k++;
 	}
+	s[k] = '\0';
 	return (s);
 }
