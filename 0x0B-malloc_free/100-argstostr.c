@@ -21,7 +21,7 @@ char *argstostr(int r, char **arr)
 	k = 0;
 	if (r == 0 || arr == NULL)
 		return (NULL);
-	s = (char *)malloc(sizeof(char) * r * 10);
+	s = (char *)malloc(sizeof(char) * r);
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < r; i++)
@@ -36,6 +36,6 @@ char *argstostr(int r, char **arr)
 		s[k] = '\n';
 		k++;
 	}
-	s[k - 1] = '\0';
+	s[k] = '\0';
 	return (s);
 }
