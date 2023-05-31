@@ -21,11 +21,9 @@ char *str_concat(char *str1, char *str2)
 	i = 0;
 	if ((str1 == NULL) || (str2 == NULL))
 	{
-		if ((str1 == NULL) && (str2 == NULL))
-			return (NULL);
-		else if ((str1 == NULL) && (str2 != NULL))
+		if ((str1 == NULL) && (str2 != NULL))
 			lg1 = 1 + strlen(str2);
-		else if ((str1 != NULL) && (str2 == NULL))
+		if ((str1 != NULL) && (str2 == NULL))
 			lg1 = 1 + strlen(str1);
 		s = (char *)malloc(sizeof(char) * lg1);
 		if (s == NULL)
@@ -34,9 +32,11 @@ char *str_concat(char *str1, char *str2)
 		}
 		while (i <= lg1 - 1)
 		{
-			if (i == lg1 - 1)
+			if ((i == lg1 - 1) || ((str1 == NULL) && (str2 == NULL)))
 			{
 				s[i] = '\0';
+				if ((str1 == NULL) && (str2 == NULL))
+					return (s);
 			}
 			else
 			{
