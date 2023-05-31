@@ -16,25 +16,23 @@ char **strtow(char *str)
 	int i;
 	int j;
 	int k;
-	int count1;
-	int index;
+	int count;
 	
 	if (str == NULL)
 		return (NULL);
 	count = 0;
 	i = 0;
 	j = 0;
-	index = 0;
 	while (str[i] != '\0')
 	{
 		if (str == ' ')
-			count1++;
+			count++;
 		i++;
 	}
-	ai = (int *)malloc(sizeof(int) * count1 + 1);
+	ai = (int *)malloc(sizeof(int) * count + 1);
 	if (ai == NULL)
 		return (NULL);
-	for (i = 0; i <= count1; i++)
+	for (i = 0; i <= count; i++)
 	{
 		k = 0;
 		while (str[j] != ' ')
@@ -48,6 +46,7 @@ char **strtow(char *str)
 	s = (int **)malloc(sizeof(int *) * count + 1);
 	if (s == NULL)
 		return (NULL);
+	k = 0;
 	for (i = 0; i <= count; i++)
 	{
 		s[i] = (int *)malloc(sizeof(int) * ai[i] + 1);
@@ -59,9 +58,9 @@ char **strtow(char *str)
 			return (NULL);
 		}
 		for (j = 0; j < ai[i]; j++)
-			s[i][j] = str[index + j];
+			s[i][j] = str[k + j];
 		s[i][ai[i]] = '\0'
-		index = index + ai[i] + 1;
+		k = k + ai[i] + 1;
 	}
 	return (s);
 }
