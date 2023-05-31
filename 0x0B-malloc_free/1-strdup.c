@@ -24,17 +24,25 @@ char *_strdup(const char *str)
 	if (lg == 1)
 	{
 		s = (char *)malloc(sizeof(char) * lg);
+		if(s == NULL)
+		{
+			return (NULL);
+		}
 		s[0] = '\0';
 		return (s);
 	}
 	s = (char *)malloc(sizeof(char) * lg);
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 	i = 0;
-	while (i < lg-1)
+	while (i < lg - 1)
 	{
 		s[i] = str[i];
 		i++;
 	}
-	s[lg-1] = '\0';
+	s[lg - 1] = '\0';
 	return (s);
 	free(s);
 }
