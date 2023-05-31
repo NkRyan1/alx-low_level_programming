@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  *_strdup - main block
@@ -13,6 +14,7 @@ char *_strdup(const char *str)
 {
 	char *s;
 	int lg;
+	int i;
 
 	lg = strlen(str);
 	if (lg == 0)
@@ -25,12 +27,12 @@ char *_strdup(const char *str)
 		return (NULL);
 	}
 	i = 0;
-	while (i < a)
+	while (i < lg)
 	{
 		s[i] = str[i];
 		i++;
 	}
-	s[a] = '\0';
+	s[lg] = '\0';
 	return (s);
 	free(s);
 }
