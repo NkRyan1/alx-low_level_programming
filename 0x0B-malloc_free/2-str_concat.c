@@ -18,6 +18,7 @@ char *str_concat(char *str1, char *str2)
 	int lg1;
 	int i;
 
+	i = 0;
 	if ((str1 == NULL) || (str2 == NULL))
 	{
 		if ((str1 == NULL) && (str2 == NULL))
@@ -39,10 +40,10 @@ char *str_concat(char *str1, char *str2)
 			}
 			else
 			{
-				if ((str1 == NULL) && (str2 != NULL))
-					s[i] = str2[i];
-				if ((str1 != NULL) && (str2 == NULL))
+				if (str1 != NULL)
 					s[i] = str1[i];
+				if (str2 != NULL)
+					s[i] = str2[i];
 			}
 			i++;
 		}
@@ -55,7 +56,6 @@ char *str_concat(char *str1, char *str2)
 	{
 		return (NULL);
 	}
-	i = 0;
 	while (i <= lg1 - 1)
 	{
 		if (i == lg1 - 1)
