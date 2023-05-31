@@ -46,9 +46,11 @@ char *str_concat(char *str1, char *str2)
 		s[i] = str1[i];
 		i++;
 	}
-//	s[lg1 - 1] = '\0';
 	strcat(s, str2);
-//	s[lg - 1] = '\0';
+/**
+ * 	s[lg - 1] = '\0';
+ *
+ */ 
 	return (s);
 	free(s);
 }
