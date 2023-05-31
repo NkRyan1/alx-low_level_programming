@@ -15,6 +15,7 @@ int **alloc_grid(int c, int r)
 	int **s;
 	int i;
 	int j;
+	int k;
 
 	if (c == 0 || r == 0)
 		return (NULL);
