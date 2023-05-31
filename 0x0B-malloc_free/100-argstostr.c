@@ -31,6 +31,7 @@ char *argstostr(int r, char **arr)
 			co++;
 			j++;
 		}
+		co++;
 	}
 	s = (char *)malloc(sizeof(char) * co);
 	if (s == NULL)
