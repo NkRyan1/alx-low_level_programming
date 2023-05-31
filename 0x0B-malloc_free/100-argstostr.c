@@ -33,7 +33,7 @@ char *argstostr(long int r, char **arr)
 		}
 		co++;
 	}
-	s = (char *)malloc(sizeof(char) * (co - 2));
+	s = (char *)malloc(sizeof(char) * (r * 10));
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < r; i++)
