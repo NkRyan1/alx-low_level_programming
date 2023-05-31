@@ -35,7 +35,7 @@ char *str_concat(char *str1, char *str2)
 		{
 			if (i == lg1 - 1)
 			{
-				s[i] = 	'\0';
+				s[i] = '\0';
 			}
 			else
 			{
