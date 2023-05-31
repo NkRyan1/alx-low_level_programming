@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- *str_concat - main block
+ *str_concat - main block.
  *Description: Concatenates two strings.
  *@str1: Address to the 1st string given as parameter.
  *@str2: Address to the 2nd string given as parameter.
