@@ -21,7 +21,7 @@ char *argstostr(int r, char **arr)
 	k = 0;
 	if (r == 0 || arr == NULL)
 		return (NULL);
-	s = (char *)malloc(sizeof(char) * r);
+	s = (char *)malloc(sizeof(char) * r * 10);
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < r; i++)
