@@ -10,7 +10,7 @@
  *
  */
 
-char *alloc_grid(int c, int r)
+int **alloc_grid(int c, int r)
 {
 	int **s;
 	int i;
