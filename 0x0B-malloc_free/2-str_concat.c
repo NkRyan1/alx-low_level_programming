@@ -20,51 +20,33 @@ char *str_concat(char *str1, char *str2)
 
 	if ((str1 == NULL) || (str2 == NULL))
 	{
-		if (str1 == NULL)
-		{
+		if ((str1 == NULL) && (str2 == NULL))
+			return (NULL);
+		else if ((str1 == NULL) && (str2 != NULL))
 			lg1 = 1 + strlen(str2);
-			s = (char *)malloc(sizeof(char) * lg1);
-			if (s == NULL)
-			{
-				return (NULL);
-			}
-			while (i <= lg1 - 1)
-			{
-				if (i == lg1 - 1)
-				{
-					s[i] = '\0';
-				}
-				else
-				{
-					s[i] = str2[i];
-				}
-				i++;
-			}
-			return (s);
-		}
-		else if (str2 == NULL)
-		{
+		else if ((str1 != NULL) && (str2 == NULL))
 			lg1 = 1 + strlen(str1);
-			s = (char *)malloc(sizeof(char) * lg1);
-			if (s == NULL)
-			{
-				return (NULL);
-			}
-			while (i <= lg1 - 1)
-			{
-				if (i == lg1 - 1)
-				{
-					s[i] = '\0';
-				}
-				else
-				{
-					s[i] = str1[i];
-				}
-				i++;
-			}
-			return (s);
+		s = (char *)malloc(sizeof(char) * lg1);
+		if (s == NULL)
+		{
+			return (NULL);
 		}
-		return (NULL);
+		while (i <= lg1 - 1)
+		{
+			if (i == lg1 - 1)
+			{
+				s[i] = 	'\0';
+			}
+			else
+			{
+				if ((str1 == NULL) && (str2 != NULL))
+					s[i] = str2[i];
+				if ((str1 != NULL) && (str2 == NULL))
+					s[i] = str1[i];
+			}
+			i++;
+		}
+		return (s);
 	}
 	lg = 1 + strlen(str1) + strlen(str2);
 	lg1 = 1 + strlen(str1);
