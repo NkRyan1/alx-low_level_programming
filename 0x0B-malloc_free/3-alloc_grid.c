@@ -16,12 +16,12 @@ int **alloc_grid(int c, int r)
 	int i;
 	int j;
 	
-	s = (int **)malloc(sizeof(char) * r);
+	s = (int **)malloc(sizeof(int *) * r);
         if (s == NULL)
                 return (NULL);
         for (i = 0; i < r; i++)
         {
-		s[i] = (int *)malloc(sizeof(char)*c);
+		s[i] = (int *)malloc(sizeof(int)*c);
 		if (s[i] == NULL)
 			return (NULL);
 		for (j = 0; j < c; j++)
