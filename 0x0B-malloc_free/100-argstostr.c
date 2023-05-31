@@ -35,8 +35,7 @@ char *argstostr(int r, char **arr)
 		}
 		s[k] = '\n';
 		k++;
-	{
+	}
 	s[k - 1] = '\0';
 	return (s);
 }
-
