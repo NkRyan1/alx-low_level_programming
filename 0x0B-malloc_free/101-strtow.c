@@ -25,7 +25,7 @@ char **strtow(char *str)
 	j = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == " ")
+		if (str[i] == ' ')
 			count++;
 		i++;
 	}
