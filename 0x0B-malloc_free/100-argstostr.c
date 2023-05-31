@@ -11,13 +11,13 @@
  *
  */
 
-char *argstostr(int r, char **arr)
+char *argstostr(long int r, char **arr)
 {
 	char *s;
-	int i;
-	int j;
-	int k;
-	int co;
+	long int i;
+	long int j;
+	long int k;
+	long int co;
 
 	k = 0;
 	j = 0;
@@ -33,7 +33,7 @@ char *argstostr(int r, char **arr)
 		}
 		co++;
 	}
-	s = (char *)malloc(sizeof(char) * co);
+	s = (char *)malloc(sizeof(char) * (co - 2));
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < r; i++)
