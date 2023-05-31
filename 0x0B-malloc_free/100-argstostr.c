@@ -17,11 +17,22 @@ char *argstostr(int r, char **arr)
 	int i;
 	int j;
 	int k;
+	int co;
 
 	k = 0;
+	j = 0;
+	co = 0;
 	if (r == 0 || arr == NULL)
 		return (NULL);
-	s = (char *)malloc(sizeof(char) * r * 10);
+	for (i = 0; i < r; i++)
+	{
+		while (arr[i][j] != '\0')
+		{
+			co++;
+			j++;
+		}
+	}
+	s = (char *)malloc(sizeof(char) * co);
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < r; i++)
