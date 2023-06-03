@@ -41,7 +41,6 @@ char **strtow(char *str)
 		u = count;
 	else
 		u = count - 1;
-	printf("%d \n", u);
 	ai = (int *)malloc(sizeof(int) * u);
 	if (ai == NULL)
 		return (NULL);
@@ -63,9 +62,7 @@ char **strtow(char *str)
 		ai[i] = k;
 		i++;
 	}
-	for (i = 0; i < u; i++)
-		printf("%d ", ai[i]);
-	s = (char **)malloc(sizeof(char *) * u);
+	s = (char **)malloc(sizeof(char *) * u + 1);
 	if (s == NULL)
 		return (NULL);
 	k = 0;
@@ -91,22 +88,18 @@ char **strtow(char *str)
 		while (str[j] != ' ')
 		{
 			s[i][k] = str[j];
-			printf("Ki is %d \n", k);
-			printf("char is %s \n", &str[j]);
-			printf("j is %d \n", j);
 			k++;
 			j++;
 		}
 		if (k == 0)
 		{
 			j++;
-			printf("K is %d \n", k);
 			continue;
 		}
 		s[i][ai[i]] = '\0';
 		i++;
-		printf("i is %d \n", i);
 	}
+	s[u] = '\0';
 	return (s);
 }
 
